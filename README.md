@@ -1,6 +1,7 @@
 🔌 SocketSync
 
 SocketSync is a network-based task orchestration system built in C++ that simulates real-time coordination between a central controller and multiple distributed worker clients using TCP sockets. Designed for concurrency and systems programming environments, SocketSync replaces shared memory with structured communication protocols, enabling synchronized task execution across fully independent processes.
+
 📘 Introduction
 
 SocketSync connects a central dispatcher (Mom) with four autonomous worker processes (Kids) over socket connections. Each Kid uses a behavioral profile (mood) to decide which job to take from the shared task list. Communication is handled through a custom protocol using enum-based message codes for reliability and structure.
