@@ -7,6 +7,7 @@ SocketSync is a network-based task orchestration system built in C++ that simula
 SocketSync connects a central dispatcher (Mom) with four autonomous worker processes (Kids) over socket connections. Each Kid uses a behavioral profile (mood) to decide which job to take from the shared task list. Communication is handled through a custom protocol using enum-based message codes for reliability and structure.
 
 This architecture mimics a distributed system where synchronized task execution is achieved without shared memory—only through carefully orchestrated socket messaging.
+
 ✨ Features
 
     🔌 TCP Socket-Based Communication
@@ -28,11 +29,13 @@ This architecture mimics a distributed system where synchronized task execution 
     Each completed job earns points, and the top-performing Kid receives a performance bonus.
 
 💻 Usage
+
 🔧 Compilation
 
 make
 
 Compiles both the server (mom) and client (kid) binaries.
+
 ▶️ Running the Simulation
 
     Start the Dispatcher (Mom):
@@ -85,6 +88,7 @@ Communication between Mom and the Kids is managed through enum-based message cod
     QUIT
 
 Jobs are transmitted as blocks of integers (not strings), and responses are validated before execution proceeds.
+
 📈 Sample Output
 
 Refer to output.txt for a snapshot of a full run including:
@@ -100,6 +104,7 @@ Refer to output.txt for a snapshot of a full run including:
 🤝 Contributing
 
 Contributions to SocketSync are welcome! Whether you're improving performance, adding resilience features, or expanding the protocol, feel free to fork the repo and open a pull request. For major feature ideas, please open an issue to start a discussion.
+
 📜 License
 
 SocketSync is licensed under the MIT License. See the LICENSE file for full terms.
